@@ -5,25 +5,18 @@ public class Main
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-	
-		int[] array = new int[9];
-		int max = array[0];
-		int count = 0;
+		int[] array = new int[30];
 		
-		for(int i = 0; i<9; i++)
+		for(int i=0; i<28; i++)
 		{
-			array[i] = sc.nextInt();
-		
-			if(array[i] > max)
-			{
-				max = array[i];
-				count = i+1;
-			}
+			int n = sc.nextInt(); 
+			array[n-1] = 1;
 		}
-		System.out.println(max);
-		System.out.println(count);
+
+		for(int i=0; i<30; i++)
+			if (array[i] != 1)
+				System.out.println(i+1);
 		
 		sc.close();
-	
 	}
 }
