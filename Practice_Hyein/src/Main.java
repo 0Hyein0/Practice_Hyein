@@ -6,31 +6,21 @@ public class Main
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		int[] array = new int[10];
-		int count = 0;
-		boolean flag;
+		int n = sc.nextInt();	// 과목 갯수
+		int[] score = new int[n];
+		double max = 0;
+		double avg = 0;
 		
-		// 배열에 입력 받은 수를 42로 나눈 나머지 저장
-		for(int i=0; i<10; i++)
-			array[i] = sc.nextInt() % 42;
-		
-		
-		for(int i = 0; i<array.length; i++)
+		for(int i=0; i<n; i++)
 		{
-			flag = false;
-			
-			for(int j=i+1; j<array.length; j++)
-			{
-				if(array[i] == array[j])
-				{
-					flag = true;
-					break;
-				}
-			}
-			if(flag == false)
-				count++;
+			score[i] = sc.nextInt();
+			if (score[i] > max)
+				max = score[i];
 		}
-		System.out.println(count);
-		sc.close();
+		
+		for(int i=0; i<score.length; i++)
+			avg += (score[i]/max*100);
+		
+		System.out.println(avg/n);
 	}
 }
