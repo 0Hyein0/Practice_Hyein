@@ -1,20 +1,28 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-		// 11720번
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int n = sc.nextInt();
-		String num = sc.next();
-		int result = 0;
+		String word = br.readLine();
+		int[] array = new int[26];		
 		
-		for(int i=0; i<n; i++)
-			result += num.charAt(i)-'0';
+		for(int i=0; i<26; i++)
+			array[i] = -1;				
 		
-		System.out.println(result);
-		sc.close();
+		for(int i=0; i<word.length(); i++)
+		{
+			char a = word.charAt(i);
+		
+			if(array[a - 'a'] == -1)	
+				array[a - 'a'] = i;		
+		}
+		
+		for (int i=0; i < 26; i++)
+			System.out.print(array[i] + " ");
 	}
 }
