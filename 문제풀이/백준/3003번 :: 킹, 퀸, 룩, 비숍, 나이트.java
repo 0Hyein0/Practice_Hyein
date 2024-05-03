@@ -11,7 +11,7 @@ public class Main
 		String str = br.readLine();
 		StringTokenizer st = new StringTokenizer(str, " ");
 		
-		int[] chess = {1,1,2,2,2,8};
+		int[] chess = {1,1,2,2,2,8};	// 각 피스의 갯수
 		
 		for(int i=0; i<chess.length; i++)
 			System.out.print(chess[i]-Integer.parseInt(st.nextToken()) + " ");
