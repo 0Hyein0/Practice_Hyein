@@ -30,6 +30,7 @@ public class Main
 				{
 					xResult = x;
 					yResult = y;
+					break;
 				}	
 			}
 		}
