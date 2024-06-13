@@ -9,13 +9,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        long result = 1;
-
-        for(int i=1; i<=N; i++)
-        {
-            result *= i;
-        }
-
-        System.out.println(result);
+        System.out.println(factorial(N));
     }
+
+    public static long factorial(int N){
+        if(N==0 || N==1)
+            return 1;
+        else
+            return N*factorial(N-1);
+    }
+
 }
