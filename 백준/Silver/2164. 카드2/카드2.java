@@ -17,13 +17,9 @@ public class Main {
 
         while (queue.size() > 1) {
             queue.poll();
-            if(!queue.isEmpty()) {
-                int peek = queue.peek();
-                queue.poll();
-                queue.add(peek);
-            }
+            queue.add(queue.poll());
         }
-        for (int num : queue)
-            System.out.println(num);
+
+        System.out.println(queue.peek());
     }
 }
