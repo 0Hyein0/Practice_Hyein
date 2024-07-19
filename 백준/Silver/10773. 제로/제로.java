@@ -25,6 +25,6 @@ public class Main {
         for(int j : stack)
             sum += j;
 
-        System.out.println(sum);
+        System.out.print(sum);
     }
 }
