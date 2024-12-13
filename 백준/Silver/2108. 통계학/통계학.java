@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.StringTokenizer;
 
 public class Main {
 
@@ -41,7 +40,7 @@ public class Main {
                 max = num[i];
                 flag = true;
             }
-            else if(num[i]==max && flag == true) {
+            else if(num[i]==max && flag) {
                 count = i-4000;
                 flag = false;
             }
