@@ -10,8 +10,8 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
 
-        long A = Integer.parseInt(st.nextToken());
-        long B = Integer.parseInt(st.nextToken());
+        long A = Long.parseLong(st.nextToken());
+        long B = Long.parseLong(st.nextToken());
 
         if(B>A)
         {
